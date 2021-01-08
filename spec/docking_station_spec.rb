@@ -32,7 +32,13 @@ describe DockingStation do
        20.times { subject.dock(Bike.new) }
        expect { subject.dock Bike.new}.to raise_error 'docking station full'
     end
-
-
+    
+    #  it 'shows whether the docking station is full' do 
+    #     expect(subject).to respond_to(:full?)
+    # end 
+    
+    # it 'shows whether the docking station is empty' do 
+    #     expect(subject).to respond_to(:empty?)
+    # end
 
     end

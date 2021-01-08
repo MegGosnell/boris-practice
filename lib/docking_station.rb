@@ -10,9 +10,21 @@ class DockingStation
         @contents.pop
 end
 def dock(bike)
-    fail "docking station full" if @contents.length >= @capacity
+    fail "docking station full" if full?
     @contents << bike
     bike
 end
 attr_reader :contents
+private
+def full?
+    if @contents.length < @capacity 
+        return false 
+    else @contents.length == @capacity
+        return true 
+end 
+end
+def empty? 
+    if @contents.empty?
+end 
+end
 end
